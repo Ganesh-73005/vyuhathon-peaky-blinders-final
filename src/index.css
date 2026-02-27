@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #09090B;
+  --foreground: #FAFAFA;
+  --card: #18181B;
+  --primary: #22C55E;
+  --secondary: #27272A;
+  --muted: #27272A;
+  --muted-foreground: #A1A1AA;
+  --accent: #F59E0B;
+  --destructive: #EF4444;
+  --border: #27272A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-tamil {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  line-height: 1.6;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Chat bubbles */
+.chat-bubble-user {
+  background: linear-gradient(135deg, var(--primary), #16A34A);
+  color: #000;
+}
+
+.chat-bubble-ai {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+/* Voice animation */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.voice-pulse {
+  animation: pulse-ring 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { height: 8px; }
+  50% { height: 24px; }
+}
+
+.voice-wave span {
+  animation: wave 0.8s ease-in-out infinite;
+}
+
+.voice-wave span:nth-child(2) { animation-delay: 0.1s; }
+.voice-wave span:nth-child(3) { animation-delay: 0.2s; }
+.voice-wave span:nth-child(4) { animation-delay: 0.3s; }
+.voice-wave span:nth-child(5) { animation-delay: 0.4s; }
+
+/* Mobile bottom nav safe area */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(24, 24, 27, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Button hover states */
+.btn-primary {
+  @apply bg-primary text-black font-semibold px-4 py-2 rounded-xl transition-all duration-200;
+}
+
+.btn-primary:hover {
+  @apply bg-green-400 scale-105;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-foreground font-medium px-4 py-2 rounded-xl transition-all duration-200;
+}
+
+.btn-secondary:hover {
+  @apply bg-zinc-600;
+}
+
+/* Card styling */
+.card {
+  @apply bg-card rounded-xl p-4 border border-border;
+}
+
+/* Input styling */
+.input {
+  @apply bg-secondary border border-border rounded-xl px-4 py-3 text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out forwards;
+}
