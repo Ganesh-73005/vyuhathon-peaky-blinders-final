@@ -31,6 +31,8 @@ Small shop owners struggle with:
 
 ### 💡 Solution
 
+<img width="2848" height="1504" alt="Gemini_Generated_Image_e18i4me18i4me18i" src="https://github.com/user-attachments/assets/c9a9accf-b0ff-48ca-b667-2990f1c0ecb3" />
+
 Hisaab provides an AI-powered assistant that:
 - Understands voice and text commands in multiple languages (English, Hindi, Tamil)
 - Manages stock and sales through natural conversations
@@ -134,6 +136,13 @@ Hisaab provides an AI-powered assistant that:
 │         │   │   70B)   │   │ Intel)  │   │         │
 └─────────┘   └──────────┘   └─────────┘   └─────────┘
 ```
+### Snapshots
+
+<img width="844" height="406" alt="Screenshot 2026-02-28 at 2 26 14 PM" src="https://github.com/user-attachments/assets/992e49e8-c741-49e4-b9f1-b662d854865b" />
+
+
+<img width="836" height="392" alt="Screenshot 2026-02-28 at 2 27 03 PM" src="https://github.com/user-attachments/assets/1599cc5a-caef-4272-9b13-229f514777eb" />
+
 
 ### Tech Stack
 
